@@ -18,7 +18,16 @@ try:
     GROQ_AVAILABLE = True
 except ImportError:
     GROQ_AVAILABLE = False
-
+    
+def sanitize_for_groq(text: str) -> str:
+    """
+        Groq (or the underlying HTTP stack) may sometimes choke on non-ASCII chars
+        in certain environments. This helper removes emojis and non-ASCII symbols.
+        """
+    if not isinstance(text, str):
+        text = str(text)
+    return text.encode("ascii", "ignore").decode()
+        
 # ---------------- Page configuration ----------------
 st.set_page_config(
     page_title="Stock Tracker",
@@ -175,14 +184,7 @@ class StockTracker:
         )
 
         return fig
-    def sanitize_for_groq(text: str) -> str:
-        """
-        Groq (or the underlying HTTP stack) may sometimes choke on non-ASCII chars
-        in certain environments. This helper removes emojis and non-ASCII symbols.
-        """
-        if not isinstance(text, str):
-            text = str(text)
-        return text.encode("ascii", "ignore").decode()
+
 
     def analyze_with_ai(self, ticker: str, query: str, stock_data: dict, api_key: str) -> str:
         """Use Groq AI to analyze stock data"""
@@ -600,6 +602,3 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-
-
-
