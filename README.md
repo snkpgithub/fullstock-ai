@@ -1,10 +1,7 @@
-Here is a **clean, professional GitHub README.md** tailored for your project
-—including your website URL placeholder, usage instructions, deployment notes, screenshots placeholders, and AI explanation.
 
-You can copy-paste this directly into `README.md` in your repository.
 
 ---
-# FullStock.ai
+# FullStock.ai by Shashank Pandey
 # 📈 Universal Stock Tracker – AI-Powered Stock Analysis
 
 ### Real-time charts, financial metrics, and Groq-powered AI insights for any stock
