@@ -5,7 +5,7 @@ AI-powered web application to track any stock (default: AAPL)
 Requirements:
 pip install streamlit groq yfinance pandas plotly
 """
-
+!pip install yfinance
 import streamlit as st
 import yfinance as yf
 import pandas as pd
@@ -600,3 +600,4 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+
