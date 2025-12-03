@@ -9,7 +9,7 @@ You can copy-paste this directly into `README.md` in your repository.
 
 ### Real-time charts, financial metrics, and Groq-powered AI insights for any stock
 
-🔗 **Live App:** [https://YOUR-STREAMLIT-APP-URL.streamlit.app](https://fullstock-ai.streamlit.app/)
+🔗 **Live App:** [https://fullstock-ai.streamlit.app](https://fullstock-ai.streamlit.app/)
 
 ---
 
